@@ -2,6 +2,10 @@
 
 This will be a multi-chapter training that will conver the following topics:
 
+# Prerequisites
+- Azure Subscription
+- OPC UA Server
+
 # Edge 
 - Deploying Azure IoT Edge 
 - Configuring and Deploying the OPC Publisher Module on Azure IoT Edge
