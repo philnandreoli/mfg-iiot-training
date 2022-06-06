@@ -12,6 +12,7 @@ This will be a multi-chapter training that will conver the following topics:
 - Chapter 3 - Database at the Edge - Azure SQL
 - Chapter 4 - Dashboarding at the Edge - Grafana
 - Chapter 5 - Monitoring 
+- Chapter 6 - Cloud to Device Commands
 
 # Cloud 
 - Publishing OPC UA data to Azure Digital Twin
