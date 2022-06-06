@@ -7,7 +7,8 @@ This will be a multi-chapter training that will conver the following topics:
 - OPC UA Server
 
 |Deployment Location|Module #|Module Name|Description|
-|-------------------|--------|-----------|-----------|
+|-------------------|:------:|-----------|-----------|
+|Edge               |1       |Azure IoT Edge Deployment|You will learn how to deploy Azure IoT Edge on a Linux VM|
 
 
 
