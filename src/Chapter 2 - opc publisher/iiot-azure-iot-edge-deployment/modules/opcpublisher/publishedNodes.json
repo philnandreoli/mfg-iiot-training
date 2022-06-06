@@ -1,0 +1,27 @@
+[
+    {
+        "EndpointUrl": "opc.tcp://10.3.60.104:49320/",
+        "UseSecurity": false,
+        "OpcAuthenticationMode": "Anonymous",
+        "OpcNodes": [
+            {
+                "Id": "ns=2;s=Channel1.Device1.Tag1",
+                "OpcSamplingInterval": 1000,
+                "OpcPublishingInterval": 5000,
+                "DisplayName": "Channel1.Device1.Tag1"
+            },
+            {
+                "Id": "ns=2;s=Channel1.Device1.Tag2",
+                "OpcSamplingInterval": 1000,
+                "OpcPublishingInterval": 5000,
+                "DisplayName": "Channel1.Device1.Tag2"
+            },
+            {
+                "Id": "ns=2;Simulation Examples.Functions.Sine3",
+                "OpcSamplingInterval": 1000,
+                "OpcPublishingInterval": 5000,
+                "DisplayName": "Simulation Examples.Functions.Sine3"
+            }
+        ]
+    }
+]

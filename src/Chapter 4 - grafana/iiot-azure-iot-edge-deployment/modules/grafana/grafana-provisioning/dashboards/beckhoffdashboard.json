@@ -1,0 +1,252 @@
+{
+	"annotations": {
+		"list": [
+			{
+				"builtIn": 1,
+				"datasource": {
+					"type": "grafana",
+					"uid": "-- Grafana --"
+				},
+				"enable": true,
+				"hide": true,
+				"iconColor": "rgba(0, 211, 255, 1)",
+				"name": "Annotations & Alerts",
+				"target": {
+					"limit": 100,
+					"matchAny": false,
+					"tags": [],
+					"type": "dashboard"
+				},
+				"type": "dashboard"
+			}
+		]
+	},
+	"editable": true,
+	"fiscalYearStartMonth": 0,
+	"graphTooltip": 0,
+	"links": [],
+	"liveNow": false,
+	"panels": [
+		{
+			"datasource": {
+				"type": "mssql",
+				"uid": "P16091175048AC601"
+			},
+			"description": "",
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "thresholds"
+					},
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [
+							{
+								"color": "green",
+								"value": null
+							}
+						]
+					},
+					"unit": "rotrpm"
+				},
+				"overrides": []
+			},
+			"gridPos": {
+				"h": 9,
+				"w": 12,
+				"x": 0,
+				"y": 0
+			},
+			"id": 2,
+			"options": {
+				"orientation": "auto",
+				"reduceOptions": {
+					"calcs": [
+						"lastNotNull"
+					],
+					"fields": "",
+					"values": false
+				},
+				"showThresholdLabels": false,
+				"showThresholdMarkers": true
+			},
+			"pluginVersion": "8.5.4",
+			"targets": [
+				{
+					"alias": "",
+					"datasource": {
+						"type": "mssql",
+						"uid": "P16091175048AC601"
+					},
+					"format": "time_series",
+					"rawSql": "SELECT\n  $__timeEpoch([SERVER_TIMESTAMP]),\n  [VALUE] as [value]\nFROM\n  [dbo].[DEVICE_DATA]\nWHERE\n  $__timeFilter([SERVER_TIMESTAMP]) and [NODE_ID] = 'nsu=KEPServerEX;s=Beckhoff.TF6100.PLC1.MAIN.nFan'\nORDER BY\n  [SERVER_TIMESTAMP] ASC",
+					"refId": "A"
+				}
+			],
+			"title": "Fan Speed",
+			"transformations": [],
+			"transparent": true,
+			"type": "gauge"
+		},
+		{
+			"datasource": {
+				"type": "mssql",
+				"uid": "P16091175048AC601"
+			},
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "continuous-GrYlRd"
+					},
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [
+							{
+								"color": "green",
+								"value": null
+							},
+							{
+								"color": "red",
+								"value": 381
+							}
+						]
+					}
+				},
+				"overrides": []
+			},
+			"gridPos": {
+				"h": 9,
+				"w": 12,
+				"x": 12,
+				"y": 0
+			},
+			"id": 4,
+			"options": {
+				"orientation": "auto",
+				"reduceOptions": {
+					"calcs": [
+						"last"
+					],
+					"fields": "",
+					"values": false
+				},
+				"showThresholdLabels": false,
+				"showThresholdMarkers": true
+			},
+			"pluginVersion": "8.5.4",
+			"targets": [
+				{
+					"alias": "",
+					"datasource": {
+						"type": "mssql",
+						"uid": "P16091175048AC601"
+					},
+					"format": "time_series",
+					"rawSql": "SELECT\n  $__timeEpoch([SERVER_TIMESTAMP]),\n  [VALUE] as value\nFROM\n  [dbo].[DEVICE_DATA]\nWHERE\n  $__timeFilter([SERVER_TIMESTAMP]) and NODE_ID = 'nsu=KEPServerEX;s=Beckhoff.TF6100.PLC1.MAIN.nTemperature'\nORDER BY\n  [SERVER_TIMESTAMP] ASC",
+					"refId": "A"
+				}
+			],
+			"title": "Temperature",
+			"type": "gauge"
+		},
+		{
+			"datasource": {
+				"type": "mssql",
+				"uid": "P16091175048AC601"
+			},
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "fixed"
+					},
+					"custom": {
+						"fillOpacity": 70,
+						"lineWidth": 0,
+						"spanNulls": false
+					},
+					"mappings": [
+						{
+							"options": {
+								"OFF": {
+									"color": "red",
+									"index": 1,
+									"text": "OFF"
+								},
+								"ON": {
+									"color": "green",
+									"index": 0,
+									"text": "ON"
+								}
+							},
+							"type": "value"
+						}
+					],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [
+							{
+								"color": "green",
+								"value": null
+							}
+						]
+					}
+				},
+				"overrides": []
+			},
+			"gridPos": {
+				"h": 8,
+				"w": 14,
+				"x": 5,
+				"y": 9
+			},
+			"id": 6,
+			"options": {
+				"alignValue": "left",
+				"legend": {
+					"displayMode": "list",
+					"placement": "bottom"
+				},
+				"mergeValues": true,
+				"rowHeight": 0.9,
+				"showValue": "auto",
+				"tooltip": {
+					"mode": "single",
+					"sort": "none"
+				}
+			},
+			"targets": [
+				{
+					"alias": "",
+					"datasource": {
+						"type": "mssql",
+						"uid": "P16091175048AC601"
+					},
+					"format": "time_series",
+					"rawSql": "SELECT\n  $__timeEpoch([SERVER_TIMESTAMP]),\n  CASE WHEN [VALUE] = 1 THEN 'ON' ELSE 'OFF' END as value\nFROM\n  [dbo].[DEVICE_DATA]\nWHERE\n  $__timeFilter([SERVER_TIMESTAMP]) and NODE_ID = 'nsu=KEPServerEX;s=Beckhoff.TF6100.PLC1.MAIN.bLamp'\nORDER BY\n  SERVER_TIMESTAMP ASC",
+					"refId": "A"
+				}
+			],
+			"title": "Lamp Runtime",
+			"type": "state-timeline"
+		}
+	],
+	"refresh": "5s",
+	"schemaVersion": 36,
+	"style": "dark",
+	"tags": [],
+	"templating": {
+		"list": []
+	},
+	"time": {
+		"from": "now-1h",
+		"to": "now"
+	},
+	"timepicker": {},
+	"timezone": "",
+	"title": "Beckhoff Dashboard",
+	"uid": "MZ3fSYrnk",
+	"version": 1,
+	"weekStart": ""
+}
