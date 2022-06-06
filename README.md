@@ -9,6 +9,10 @@ This will be a multi-chapter training that will conver the following topics:
 |Deployment Location|Module #|Module Name|Description|
 |-------------------|:------:|-----------|-----------|
 |Edge               |1       |Azure IoT Edge Deployment|You will learn how to deploy Azure IoT Edge on a Linux VM|
+|Edge               |2       |OPC Publisher|Learn how to configure OPC Publisher to connect to an OPC UA Server and pull tags from that server|
+|Edge               |3       |SQL|Learn how to ingest data from IoT Edge into a Azure SQL Edge Database|
+|Edge               |4       |Dashboarding|How to build dashboards that are consumable at the edge|
+|Edge               |5       |Monitoring|Monitoring different modules|
 
 
 
