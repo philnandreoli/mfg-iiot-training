@@ -6,6 +6,11 @@ This will be a multi-chapter training that will conver the following topics:
 - Azure Subscription
 - OPC UA Server
 
+|Deployment Location|Module #|Module Name|Description|
+|-------------------|--------|-----------|-----------|
+
+
+
 # Edge 
 - Chapter 1 - Deploying Azure IoT Edge
   - Test formatting
