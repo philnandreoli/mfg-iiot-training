@@ -183,8 +183,7 @@
         "schemaVersion": "1.1",
         "routes": {
           "cloud": "FROM /messages/modules/opcpublisher/* INTO $upstream",
-          "opcToSql": "FROM /messages/modules/opcpublisher/* INTO BrokeredEndpoint(\"/modules/sqledge/inputs/OPCUAData\")",
-          "opcuawriteToIoTHub": "FROM /messages/modules/opcuawrite/outputs/* INTO $upstream"
+          "opcToSql": "FROM /messages/modules/opcpublisher/* INTO BrokeredEndpoint(\"/modules/sqledge/inputs/OPCUAData\")"
         },
         "storeAndForwardConfiguration": {
           "timeToLiveSecs": 7200

@@ -2,16 +2,11 @@
   "$schema-version": "0.0.1",
   "description": "",
   "image": {
-    "repository": "mtcchiasecontainerregistry001.azurecr.io/opcuawrite",
+    "repository": "${ACR_ADDRESS}/opcuawrite",
     "tag": {
-      "version": "0.0.1",
+      "version": "${CONTAINER_VERSION_TAG}",
       "platforms": {
-        "amd64": "./Dockerfile.amd64",
-        "amd64.debug": "./Dockerfile.amd64.debug",
-        "arm32v7": "./Dockerfile.arm32v7",
-        "arm32v7.debug": "./Dockerfile.arm32v7.debug",
-        "arm64v8": "./Dockerfile.arm64v8",
-        "arm64v8.debug": "./Dockerfile.arm64v8.debug"
+        "amd64": "./Dockerfile.amd64"
       }
     },
     "buildOptions": [],
