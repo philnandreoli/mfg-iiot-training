@@ -52,7 +52,7 @@ def create_client():
                 tag.set_value(data_value)
 
             except ValueError:
-                response_payload = {"Response": "Invalid parameter"}
+                response_payload = {"Response": "Value Error: {}".format(str(e))}
                 response_status = 500
             except TypeError as e:
                 response_payload = {"Response": "Type Error: {}".format(str(e)) }
