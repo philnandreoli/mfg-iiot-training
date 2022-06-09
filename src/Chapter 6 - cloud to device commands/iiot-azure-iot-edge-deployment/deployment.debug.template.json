@@ -165,13 +165,13 @@
               }
             }
           },
-          "opcuawrite": {
+          "opctwin": {
             "version": "1.0",
             "type": "docker",
             "status": "running",
             "restartPolicy": "always",
             "settings": {
-              "image": "${MODULES.opcuawrite}",
+              "image": "${MODULES.opctwin}",
               "createOptions": {}
             }
           }

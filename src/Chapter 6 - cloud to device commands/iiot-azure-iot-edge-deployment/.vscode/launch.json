@@ -11,31 +11,31 @@
       "redirectOutput": true,
       "pathMappings": [
         {
-          "localRoot": "${workspaceFolder}/modules/opcuawrite",
+          "localRoot": "${workspaceFolder}/modules/opctwin",
           "remoteRoot": "/app"
         }
       ],
       "windows": {
         "pathMappings": [
           {
-            "localRoot": "${workspaceFolder}\\modules\\opcuawrite",
+            "localRoot": "${workspaceFolder}\\modules\\opctwin",
             "remoteRoot": "/app"
           }
         ]
       }
     },
     {
-      "name": "opcuawrite Local Debug (Python)",
+      "name": "opctwin Local Debug (Python)",
       "type": "python",
       "request": "launch",
-      "program": "${workspaceFolder}/modules/opcuawrite/main.py",
+      "program": "${workspaceFolder}/modules/opctwin/main.py",
       "console": "integratedTerminal",
       "env": {
         "EdgeHubConnectionString": "${config:azure-iot-edge.EdgeHubConnectionString}",
         "EdgeModuleCACertificateFile": "${config:azure-iot-edge.EdgeModuleCACertificateFile}"
       },
       "windows": {
-        "program": "${workspaceFolder}\\modules\\opcuawrite\\main.py"
+        "program": "${workspaceFolder}\\modules\\opctwin\\main.py"
       }
     }
   ]

@@ -2,11 +2,11 @@
   "$schema-version": "0.0.1",
   "description": "",
   "image": {
-    "repository": "${ACR_ADDRESS}/opcuawrite",
+    "repository": "${ACR_ADDRESS}/opctwin",
     "tag": {
       "version": "${CONTAINER_VERSION_TAG}",
       "platforms": {
-        "amd64": "./Dockerfile.amd64"
+        "amd64": "./Dockerfile"
       }
     },
     "buildOptions": [],
