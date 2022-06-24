@@ -6,7 +6,7 @@ This will be a multi-chapter training that will conver the following topics:
 
 ## On-Premises Prequisites
 - OPC UA Server
-- A Virtual Machine that has network access to the OPC UA Server. 
+- A Linux VM that has network access to the OPC UA Server. 
 
 ## Azure Prerequisites
 - [Azure Subscription](https://azure.microsoft.com/en-us/free/)
