@@ -1,0 +1,33 @@
+[
+    {
+        "EndpointUrl": "opc.tcp://10.3.60.104:49320/",
+        "UseSecurity": false,
+        "OpcAuthenticationMode": "Anonymous",
+        "OpcNodes": [
+            {
+                "Id": "ns=2;Beckhoff.TF6100.PLC1.MAIN.nBlinkPattern",
+                "OpcSamplingInterval": 1000,
+                "OpcPublishingInterval": 5000,
+                "DisplayName": "Beckhoff.TF6100.PLC1.MAIN.nBlinkPattern"
+            },
+            {
+                "Id": "ns=2;Beckhoff.TF6100.PLC1.MAIN.nFan",
+                "OpcSamplingInterval": 1000,
+                "OpcPublishingInterval": 5000,
+                "DisplayName": "Beckhoff.TF6100.PLC1.MAIN.nFan"
+            },
+            {
+                "Id": "ns=2;Beckhoff.TF6100.PLC1.MAIN.nTemperature",
+                "OpcSamplingInterval": 1000,
+                "OpcPublishingInterval": 5000,
+                "DisplayName": "Beckhoff.TF6100.PLC1.MAIN.nTemperature"
+            },
+            {
+                "Id": "ns=2;Beckhoff.TF6100.PLC1.MAIN.bLamp",
+                "OpcSamplingInterval": 1000,
+                "OpcPublishingInterval": 5000,
+                "DisplayName": "Beckhoff.TF6100.PLC1.MAIN.bLamp"
+            }
+        ]
+    }
+]

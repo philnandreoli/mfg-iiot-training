@@ -1,0 +1,143 @@
+{
+	"@id": "dtmi:com:microsoft:mtc:BeckoffController;1",
+	"@type": "Interface",
+	"@context": "dtmi:dtdl:context;2",
+	"displayName": "Beckoff Controller",
+	"contents": [
+		{
+			"@type": "Telemetry",
+			"name": "temperature",
+			"schema": "integer",
+			"displayName": "Temperature"
+		},
+		{
+			"@type": "Property",
+			"name": "maxTemperature",
+			"schema": "integer",
+			"displayName": "Max Temperature"
+		},
+		{
+			"@type": "Property",
+			"name": "currentTemperature",
+			"schema": "integer",
+			"displayName": "Current Temperature"
+		},
+		{
+			"@type": "Telemetry",
+			"name": "fanSpeed",
+			"schema": "integer",
+			"displayName": "Fan Speed",
+			"description": "The speed of the fan in RPM"
+		},
+		{
+			"@type": "Property",
+			"name": "currentFanSpeed",
+			"schema": "integer",
+			"displayName": "Current Fan Speed"
+		},
+		{
+			"@type": "Property",
+			"name": "maxFanSpeed",
+			"schema": "integer",
+			"displayName": "Max Fan Speed",
+			"description": "The maximum speed of the fan in RPM"
+		},
+		{
+			"@type": "Property",
+			"name": "IsLightOn",
+			"schema": "boolean",
+			"displayName": "Is Light On",
+			"description": "Whether the light is on or Off"
+		},
+		{
+			"@type": "Property",
+			"name": "OpcUaFanSpeedTag",
+			"schema": "string",
+			"displayName": "OPC UA Fan Tag",
+			"description": "The OPC UA Fan Tag"
+		},
+		{
+			"@type": "Property",
+			"name": "OpcUaLightTag",
+			"schema": "string",
+			"displayName": "OPC UA Light Tag",
+			"description": "The OPC UA Light Tag"
+		},
+		{
+			"@type": "Property",
+			"name": "OpcUaTemperatureTag",
+			"schema": "string",
+			"displayName": "OPC UA Temperature Tag",
+			"description": "The OPC UA Temperature Tag"
+		},
+		{
+			"@type": "Property",
+			"name": "OpcUaServerUrl",
+			"schema": "string",
+			"displayName": "OPC UA Server URL",
+			"description": "The OPC UA Server URL"
+		},
+		{
+			"@type": "Command",
+			"name": "TurnOnOffLight",
+			"request": {
+				"name": "TurnOnOffLightRequest",
+				"schema": {
+					"@type": "Object",
+					"fields": [
+						{
+							"name": "opcUaServer",
+							"displayName": "OPC UA Server Host Name",
+							"schema": "string"
+						},
+						{
+							"name": "node", 
+							"displayName": "The tag on the OPC UA Server that needs to be updated",
+							"schema": "string"
+						},
+						{
+							"name": "value",
+							"displayName": "The value to set the tag to",
+							"schema": "boolean"
+						}
+					]
+				}
+			},
+			"response": {
+				"name": "TurnOnOffLightResponse",
+				"schema": "string"
+			}
+		},
+		{
+			"@type": "Command",
+			"name": "SetFanSpeed",
+			"request": {
+				"name":  "SetFanSpeedRequest",
+				"schema":  {
+					"@type": "Object",
+					"fields": [
+						{
+							"name": "opcUaServer",
+							"displayName": "OPC UA Server Host Name",
+							"schema": "string"
+						},
+						{
+							"name": "node", 
+							"displayName": "The tag on the OPC UA Server that needs to be updated",
+							"schema": "string"
+						},
+						{
+							"name": "value",
+							"displayName": "The value to set the tag to",
+							"schema": "integer"
+						}
+					]
+				}
+			},
+			"response": {
+				"name": "SetFanSpeedResponse", 
+				"schema": "string"
+			}
+		}
+	]
+}
