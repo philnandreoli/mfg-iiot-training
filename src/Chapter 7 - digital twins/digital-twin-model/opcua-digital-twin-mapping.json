@@ -1,0 +1,20 @@
+[
+	{
+		"NodeId": "nsu=KEPServerEX;s=Beckhoff.TF6100.PLC1.MAIN.nFan",
+		"TwinId": "beckhoff-chicago",
+		"Property": "currentFanSpeed",
+		"ModelId": "dtmi:com:microsoft:mtc:BeckoffController;1"
+	},
+	{
+		"NodeId": "nsu=KEPServerEX;s=Beckhoff.TF6100.PLC1.MAIN.bLamp",
+		"TwinId": "beckhoff-chicago",
+		"Property": "IsLightOn",
+		"ModelId": "dtmi:com:microsoft:mtc:BeckoffController;1"
+	},
+	{
+		"NodeId": "nsu=KEPServerEX;s=Beckhoff.TF6100.PLC1.MAIN.nTemperature",
+		"TwinId": "beckhoff-chicago",
+		"Property": "currentTemperature",
+		"ModelId": "dtmi:com:microsoft:mtc:BeckoffController;1"
+	}
+]
